@@ -1,7 +1,7 @@
 #! /bin/bash
 
 source /home/nabeel/Apps/xfce-theme-switcher/themeswitch
-date=$(date +%H%M)
+time=$(date +%k%M)
 
 	echo "<img>/home/nabeel/Apps/xfce-theme-switcher/xts.svg</img>"
 	
@@ -16,9 +16,7 @@ function night_theme {
 }
 
 
-if [[ $date -ge $sunrise ]] && [[ $date -le $sunsetime ]];
-
-then
+if [[ "$time" -ge $sunrisetime ]] && [[ "$time" -le $sunsettime ]];then
 	day_theme
 else
 	night_theme
