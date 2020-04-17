@@ -22,4 +22,4 @@ else
 	night_theme
 fi
 
-
+echo "<click>/home/nabeel/Apps/xfce-theme-switcher/xfcethemeswitch.sh</click>"
