@@ -7,16 +7,21 @@ time=$(date +%k%M)
 	
 function day_theme {
 	xfconf-query -c xsettings -p /Net/ThemeName -s $daytheme
-	xfconf-query -c xsettings -p /Net/IconThemeName -s $dayicontheme	
+	xfconf-query -c xsettings -p /Net/IconThemeName -s $dayicontheme
+	if [[ "$customisewm" == "y" ]]	;then
+		xfconf-query -c xfwm4 -p /general/theme -s $daywmtheme
+	fi
 }
 
 function night_theme {
 	xfconf-query -c xsettings -p /Net/ThemeName -s $nighttheme
-	xfconf-query -c xsettings -p /Net/IconThemeName -s $nighticontheme	
+	xfconf-query -c xsettings -p /Net/IconThemeName -s $nighticontheme
+	if [[ "$customisewm" == "y" ]]	;then
+		xfconf-query -c xfwm4 -p /general/theme -s $nightwmtheme
+	fi	
 }
 
-
-if [[ "$time" -ge $sunrisetime ]] && [[ "$time" -le $sunsettime ]];then
+if [[ "$time" -ge $sunrisetime ]] && [[ "$time" -le $sunsettime ]] ;then
 	day_theme
 else
 	night_theme

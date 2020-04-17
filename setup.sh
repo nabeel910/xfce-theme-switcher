@@ -1,25 +1,35 @@
 #!/bin/bash
 
 echo -e "Please enter your sunrise time:"
-read sunrisetime
+	read sunrisetime
 
 echo -e "Please enter your sunset time: "
-read sunsettime
+	read sunsettime
 
 echo -e "Please enter your day theme: "
-read daytheme
+	read daytheme
 
 
 echo -e "Please enter your day icon theme: "
-read dayicontheme
+	read dayicontheme
 
 
 echo -e "Please enter your night theme: "
-read nighttheme
+	read nighttheme
 
 
 echo -e "Please enter your night icon theme: "
-read nighticontheme
+	read nighticontheme
+
+echo -e "Do you want to change window manager theme [y/n]: "
+	read customisewm
+
+if [ "$customisewm" = "y" ]; then
+	echo -e "Please enter your day wm theme: "
+		read daywmtheme
+	echo -e "Please enter your night wm theme: "
+		read nightwmtheme
+fi
 
 echo "
 sunrisetime=$sunrisetime
@@ -27,7 +37,11 @@ sunsettime=$sunsettime
 daytheme=$daytheme
 dayicontheme=$dayicontheme
 nighttheme=$nighttheme
-nighticontheme=$nighticontheme" > /home/nabeel/Apps/xfce-theme-switcher/themeswitch
+nighticontheme=$nighticontheme
+daywmtheme=$daywmtheme
+nightwmtheme=$nightwmtheme
+customisewm=$customisewm
+" > /home/nabeel/Apps/xfce-theme-switcher/themeswitch
 
 
 
