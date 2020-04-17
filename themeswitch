@@ -1,0 +1,11 @@
+
+sunrisetime=0630
+sunsettime=1700
+daytheme=Plata-Compact
+dayicontheme=Qogir
+nighttheme=Plata-Noir-Compact
+nighticontheme=Qogir-dark
+daywmtheme=Plata-Compact
+nightwmtheme=Plata-Noir-Compact
+customisewm=y
+

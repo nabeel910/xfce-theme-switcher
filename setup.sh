@@ -41,7 +41,7 @@ nighticontheme=$nighticontheme
 daywmtheme=$daywmtheme
 nightwmtheme=$nightwmtheme
 customisewm=$customisewm
-" > /home/nabeel/Apps/xfce-theme-switcher/themeswitch
+" > $PWD/themeswitch
 
 
 

@@ -1,9 +1,14 @@
 #! /bin/bash
 
-source /home/nabeel/Apps/xfce-theme-switcher/themeswitch
+pushd `dirname $0` > /dev/null
+SCRIPTPATH=`pwd -P`
+popd > /dev/null
+
+source $SCRIPTPATH/themeswitch
+
 time=$(date +%k%M)
 
-	echo "<img>/home/nabeel/Apps/xfce-theme-switcher/xts.svg</img>"
+	echo "<img>$SCRIPTPATH/xts.svg</img>"
 	
 function day_theme {
 	xfconf-query -c xsettings -p /Net/ThemeName -s $daytheme
@@ -27,4 +32,4 @@ else
 	night_theme
 fi
 
-echo "<click>/home/nabeel/Apps/xfce-theme-switcher/xfcethemeswitch.sh</click>"
+echo "<click>$SCRIPTPATH/xfcethemeswitch.sh</click>"
