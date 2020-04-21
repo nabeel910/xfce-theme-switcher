@@ -23,12 +23,25 @@ echo -e "Please enter your night icon theme: "
 
 echo -e "Do you want to change window manager theme [y/n]: "
 	read customisewm
+	
+	
 
 if [ "$customisewm" = "y" ]; then
 	echo -e "Please enter your day wm theme: "
 		read daywmtheme
 	echo -e "Please enter your night wm theme: "
 		read nightwmtheme
+fi
+	
+echo -e "Do you want to change cursor theme [y/n]: "
+	read customisecursor
+
+
+if [ "$customisecursor" = "y" ]; then
+	echo -e "Please enter your day cursor theme: "
+		read daycursortheme
+	echo -e "Please enter your night cursor theme: "
+		read nightcursortheme
 fi
 
 echo "
@@ -40,7 +53,10 @@ nighttheme=$nighttheme
 nighticontheme=$nighticontheme
 daywmtheme=$daywmtheme
 nightwmtheme=$nightwmtheme
+daycursortheme=$daycursortheme
+nightcursortheme=$nightcursortheme
 customisewm=$customisewm
+customisecursor=$customisecursor
 " > $PWD/themeswitch
 
 

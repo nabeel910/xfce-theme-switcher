@@ -16,6 +16,9 @@ function day_theme {
 	if [[ "$customisewm" == "y" ]]	;then
 		xfconf-query -c xfwm4 -p /general/theme -s $daywmtheme
 	fi
+	if [[ "$customisecursor" == "y" ]]	;then
+		xfconf-query -c xsettings -p /Gtk/CursorThemeName -s $daycursortheme
+	fi
 }
 
 function night_theme {
@@ -24,6 +27,9 @@ function night_theme {
 	if [[ "$customisewm" == "y" ]]	;then
 		xfconf-query -c xfwm4 -p /general/theme -s $nightwmtheme
 	fi	
+	if [[ "$customisecursor" == "y" ]]	;then
+		xfconf-query -c xsettings -p /Gtk/CursorThemeName -s $nightcursortheme
+	fi
 }
 
 if [[ "$time" -ge $sunrisetime ]] && [[ "$time" -le $sunsettime ]] ;then
