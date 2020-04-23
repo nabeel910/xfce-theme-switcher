@@ -51,6 +51,7 @@ echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.Xdbus
 env | grep XAUTHORITY >> $HOME/.Xdbus
 echo 'export XAUTHORITY' >> $HOME/.Xdbus
 
+
 echo "
 sunrisetime=$sunrisetime
 sunsettime=$sunsettime
@@ -65,6 +66,3 @@ nightcursortheme=$nightcursortheme
 customisewm=$customisewm
 customisecursor=$customisecursor
 " > $PWD/themeswitch
-
-
-
