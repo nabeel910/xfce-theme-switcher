@@ -1,8 +1,11 @@
 # xfce-theme-switcher
-Switch xfce themes using a script and genmon xfce plugin
+Switch xfce themes using a script and a cronjob via crontab
 
 Needed packages:
-xfce4-genmon-plugin
+cornie
+
+on arch linux 
+sudo pacman -S cronie
 
 installation and setup: 
 
@@ -13,4 +16,10 @@ chmod +x setup.sh && chmod +x xfcethemeswitch.sh
 
 3. run the setup.sh either from terminal > ./setup.sh or using gui open with terminal and enter your desired setup e.g sunrise time, sunset time, light and dark themes and icons to use.
 
-4. Add xfce4-genmon-plugin to the panel and add xfcethemeswitch.sh full path to the command in genmon dialog and set period to the desired period eg. 300 and disable label check box.
+4. schedule the xfcethemeswitch.sh script to run periodically via a cronjob using crontab -e 
+ 
+SHELL=/bin/bash
+DISPLAY=:0.0
+* * * * * source ~/.Xdbus; /home/$USER/PATH/TO/xfce-theme-switcher/xfcethemeswitch.sh
+
+make sure you $DISPLAY is correct by running echo $DISPLAY in terminal
