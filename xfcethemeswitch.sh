@@ -4,7 +4,12 @@ SCRIPTPATH=`pwd -P`
 popd > /dev/null
 
 source $SCRIPTPATH/themeswitch
+if grep xfce ~/.bashrc; then
+	echo found
+else
 
+	echo $SCRIPTPATH/xfcethemeswitch.sh >> $HOME/.bashrc
+fi
 time=$(date +%k%M)
 function day_theme {
 	xfconf-query -c xsettings -p /Net/ThemeName -s $daytheme
