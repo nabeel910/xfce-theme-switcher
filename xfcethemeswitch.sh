@@ -4,13 +4,9 @@ SCRIPTPATH=`pwd -P`
 popd > /dev/null
 
 source $SCRIPTPATH/themeswitch
-if grep xfce ~/.bashrc; then
-	echo found
-else
 
-	echo $SCRIPTPATH/xfcethemeswitch.sh >> $HOME/.bashrc
-fi
 time=$(date +%k%M)
+	echo "<img>$SCRIPTPATH/xts.svg</img>"
 function day_theme {
 	xfconf-query -c xsettings -p /Net/ThemeName -s $daytheme
 	xfconf-query -c xsettings -p /Net/IconThemeName -s $dayicontheme
@@ -38,3 +34,5 @@ if [[ "$time" -ge $sunrisetime ]] && [[ "$time" -le $sunsettime ]] ;then
 else
 	night_theme
 fi
+echo "<click>$SCRIPTPATH/xfcethemeswitch.sh</click>"
+
