@@ -1,2 +1,2 @@
 # xfce-theme-switcher
-switch themes based on set times via a script and a cronjob 
+switch themes based on set times via a scripts and xfce genmon plugin

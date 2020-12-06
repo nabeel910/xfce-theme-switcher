@@ -1,14 +1,14 @@
 
-sunrisetime=0630
-sunsettime=1630
-daytheme=Plata-Compact
-dayicontheme=Qogir
-nighttheme=Plata-Noir-Compact
-nighticontheme=Qogir-dark
+sunrisetime=800
+sunsettime=1530
+daytheme=Adwaita
+dayicontheme=Adwaita-Blue
+nighttheme=Adwaita-dark
+nighticontheme=Adwaita-Blue
 daywmtheme=
 nightwmtheme=
-daycursortheme=Bibata_Oil
-nightcursortheme=Bibata_Ice
+daycursortheme=
+nightcursortheme=
 customisewm=n
-customisecursor=y
+customisecursor=n
 
